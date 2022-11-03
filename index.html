@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ksiegarnia</title>
+</head>
+<body>
+        <label for="imie">Imię: <input type="text" id="imie"></label><br>
+        <label>Nazwisko: <input type="text" id="nazwisko"></label><br>
+        <label>Wiek: <input type="number" id="wiek"></label><br>
+        <label>email: <input type="email" id="email"></label><br>
+        <label>PESEL: <input type="number" id="pesel"></label><br>
+        <label>płeć: <br><input type="radio" id="m" name="plec">Chłop <br> <input type="radio" id="w" name="plec">Baba</label><br>
+        <label>telefon: <input type="number" id="telefon"></label><br>
+        <label>klasa: <input type="text" id="klasa"></label><br>
+        <label>tytuł książki: <input type="text" id="tytol"></label><br>
+        <label>wydawca: <input type="text" id="wydawca"></label><br>
+        <label>ISBN: <input type="text" id="isbn"></label><br>
+        <label>numer ewidencyjny: <input type="text" id="numer"></label><br>
+        <label>uwagi: <input type="text" id="uwagi"></label><br>
+        <button onclick="verify()">Zweryfikuj</button>
+
+    <style>
+        label{
+            margin: 10px;
+        }
+    </style>
+    <script src="verify.js"></script>
+</body>
+</html>
