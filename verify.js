@@ -14,43 +14,55 @@ function verify()
     let isbn = document.getElementById('isbn').value
     let numer = document.getElementById('numer').value
 
-    if(imie = "")
+    let alrt = "";
+
+    if(imie == "")
     {
-        alert("Podaj imię")
-        return 0
+        alrt+="Podaj imię\n"
+        document.getElementById('imie').style.background = "red"
     }
-    if(nazwisko = "")
+    else
+    document.getElementById('imie').style.background = "white"
+    if(nazwisko == "")
     {
-        alert("Podaj nazwisko")
-        return 0
+        alrt+="Podaj nazwisko\n"
+        document.getElementById('nazwisko').style.background = "red"
     }
-    if(wiek < 1 || wiek>200 || wiek == '')
+    else
+    document.getElementById('nazwisko').style.background = "white"
+    if((wiek < 1 || wiek>200) && wiek != "")
     {
-        alert("Nieprawidłowy wiek")
-        return 0
+        alrt+="Nieprawidłowy wiek\n"
+        document.getElementById('wiek').style.background = "red"
     }
+    else
+    document.getElementById('wiek').style.background = "white"
     if(!email.includes("@"))
     {
-        alert("Nieprawidłowy email")
-        return 0
+        alrt+="Nieprawidłowy email\n"
+        document.getElementById('email').style.background = "red"
     }
+    else
+    document.getElementById('email').style.background = "white"
     
     if(!m && !w)
     {
-        alert("Podaj płeć")
-        return 0
+        alrt+="Podaj płeć\n"
+        document.getElementById('plec').style.background = "red"
     }
+    else
+    document.getElementById('plec').style.background = "white"
     if(pesel.length !=11)
     {
-        alert("Niepoprawny pesel")
-        return 0
+        alrt+="Niepoprawny pesel\n"
+        document.getElementById('pesel').style.background = "red"
     }
     string = pesel.toString()
     pesel = parseInt(pesel)
     if((Math.round((pesel/10)%2) == 0 && m) || (Math.round((pesel/10)%2) == 1 && w))
     {
-        alert("Niepoprawna płeć w Peselu")
-        return 0
+        alrt+="Niepoprawna płeć w Peselu\n"
+        document.getElementById('pesel').style.background = "red"
     }
     wagi = [1,3,7,9,1,3,7,9,1,3]
     suma = 0
@@ -59,33 +71,47 @@ function verify()
         suma+= string[i]*wagi[i]
     }
     if((suma%10 != 0 && string[10]==0) || string[10] != 10-(suma%10)){
-        alert("Niepoprawna suma kontrolna peselu")
-        return 0
+        alrt+="Niepoprawna suma kontrolna peselu\n"
+        document.getElementById('pesel').style.background = "red"
     }
+    else
+    document.getElementById('pesel').style.background = "white"
 
     if(telefon < 100000000 || telefon > 999999999)
     {
-        alert("Niepoprawny telefon")
-        return 0
+        alrt+="Niepoprawny telefon\n"
+        document.getElementById('telefon').style.background = "red"
     }
+    else
+    document.getElementById('telefon').style.background = "white"
     if(!tytol){
-        alert("Podaj tytol")
-        return 0
+        alrt+="Podaj tytół\n"
+        document.getElementById('tytol').style.background = "red"
     }
+    else
+    document.getElementById('tytol').style.background = "white"
     if(!wydawca){
-        alert("Podaj wydawce")
-        return 0
+        alrt+="Podaj wydawce\n"
+        document.getElementById('wydawca').style.background = "red"
     }
+    else
+    document.getElementById('wydawca').style.background = "white"
     if(!isbn){
-        alert("Podaj ISBN")
-        return 0
+        alrt+="Podaj ISBN\n"
+        document.getElementById('isbn').style.background = "red"
     }
+    else
+    document.getElementById('isbn').style.background = "white"
     if(!numer){
-        alert("Podaj numer ewidencyjny")
-        return 0
+        alrt+="Podaj numer ewidencyjny"
+        document.getElementById('numer').style.background = "red"
     }
+    else
+    document.getElementById('numer').style.background = "white"
 
-
-    alert("Zweryfikowano!")
-    return 0
+    if(alrt == "")
+        alert("Zweryfikowano!")
+    else
+        alert(alrt)
+    return
 }
