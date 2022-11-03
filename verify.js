@@ -30,7 +30,7 @@ function verify()
     }
     else
     document.getElementById('nazwisko').style.background = "white"
-    if((wiek < 1 || wiek>200) && wiek != "" || isNaN(wiek))
+    if((wiek < 1 || wiek>200) && wiek != "" || isNaN(parseInt(wiek)))
     {
         alrt+="Nieprawidłowy wiek\n"
         document.getElementById('wiek').style.background = "red"
@@ -77,7 +77,7 @@ function verify()
     else
     document.getElementById('pesel').style.background = "white"
 
-    if(telefon < 100000000 || telefon > 999999999 || isNaN(telefon))
+    if(telefon < 100000000 || telefon > 999999999 || isNaN(parseInt(telefon)))
     {
         alrt+="Niepoprawny telefon\n"
         document.getElementById('telefon').style.background = "red"
