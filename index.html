@@ -1,39 +1,52 @@
 <!DOCTYPE html>
 <html lang="pl">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>ksiegarnia</title>
-</head>
-<body>
-        <label for="imie">Imię: <br><input type="text" id="imie"></label>
-        <label>Nazwisko: <br><input type="text" id="nazwisko"></label>
-        <label>Wiek: <br><input type="number" id="wiek"></label>
-        <label>email: <br><input type="email" id="email"></label>
-        <label>PESEL: <br><input type="number" id="pesel"></label>
-        <label id="plec">płeć: <br><input type="radio" id="m" name="plec">Chłop <br> <input type="radio" id="w" name="plec">Baba</label>
-        <label>telefon: <br><input type="number" id="telefon"></label>
-        <label>klasa: <br><input type="text" id="klasa"></label>
-        <label>tytuł książki: <br><input type="text" id="tytol"></label>
-        <label>wydawca: <br><input type="text" id="wydawca"></label>
-        <label>ISBN: <br><input type="text" id="isbn"></label>
-        <label>numer ewidencyjny: <br><input type="text" id="numer"></label>
-        <label>uwagi: <br><input type="text" id="uwagi"></label>
-        <button onclick="verify()">Zweryfikuj</button>
+  </head>
+  <body>
+    <label for="imie">Imię: <br /><input type="text" id="imie" /></label>
+    <label>Nazwisko: <br /><input type="text" id="nazwisko" /></label>
+    <label>Wiek: <br /><input type="number" id="wiek" /></label>
+    <label>email: <br /><input type="email" id="email" /></label>
+    <label>PESEL: <br /><input type="number" id="pesel" /></label>
+    <label id="plec"
+      >płeć: <br /><input type="radio" id="m" name="plec" />Chłop <br />
+      <input type="radio" id="w" name="plec" />Baba</label
+    >
+    <label>telefon: <br /><input type="number" id="telefon" /></label>
+    <label>klasa: <br /><input type="text" id="klasa" /></label>
+    <label>tytuł książki: <br /><input type="text" id="tytol" /></label>
+    <label>wydawca: <br /><input type="text" id="wydawca" /></label>
+    <label>ISBN: <br /><input type="text" id="isbn" /></label>
+    <label>numer ewidencyjny: <br /><input type="text" id="numer" /></label>
+    <label>uwagi: <br /><input type="text" id="uwagi" /></label>
+    <div id="wypluwacz"></div>
+    <button onclick="verify()">Zweryfikuj</button><br /><br /><br /><br />
+    <div id="funny">
+      <button onmouseenter="funny()">Śmieszny Przycisk</button>
+    </div>
 
     <style>
-        label{
-            margin: 10px;
-            display: block;
-        }
-        #plec{
-            display: block;
-            width:200px;
-            height: 80px;
-            border: black 1px solid;
-        }
+      label {
+        margin: 10px;
+        display: block;
+      }
+      #plec {
+        display: block;
+        width: 200px;
+        height: 80px;
+        border: black 1px solid;
+      }
+      #funny:hover button {
+        margin-left: 300px;
+      }
+      #funny {
+        width: 200px;
+      }
     </style>
     <script src="verify.js"></script>
-</body>
+  </body>
 </html>
